@@ -39,16 +39,22 @@ autocmd BufRead,BufNewFile *.htm,*.html setlocal tabstop=2 shiftwidth=2 softtabs
 Plugin 'itchyny/lightline.vim'
 Plugin 'mitermayer/vim-prettier'
 Plugin 'vim-scripts/indentpython.vim'
-"Plugin 'kien/ctrlp.vim'
+Plugin 'junegunn/fzf'
 Plugin 'micha/vim-colors-solarized'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'preservim/nerdcommenter'
 Plugin 'tmhedberg/SimpylFold'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-airline/vim-airline'
+Plugin 'morhetz/gruvbox'
+Plugin 'mattn/emmet-vim'
+Plugin 'neoclide/coc.nvim'
+
 
 set encoding=utf-8
 set number 
 set relativenumber
-set clipboard=unnamed 
 
 "mapping NERDTree to ctrl+n "
 map <C-n> :NERDTreeToggle<CR>
@@ -62,7 +68,7 @@ set shortmess+=F "hide the file info"
 
 set colorcolumn=80 "sets the red vertical color column at 80"
 "highlight the color column""
-highlight ColorColumn ctermbg=0 guibg=lightgrey 
+highlight ColorColumn ctermbg=8 guibg=lightgrey 
 
 " fzf runtimepath
 set rtp+=~/.fzf
@@ -81,3 +87,7 @@ nnoremap <space> za
 highlight Folded ctermbg=None ctermfg=Red
 
 set timeoutlen=1000 ttimeoutlen=0
+
+colorscheme gruvbox
+set background=dark
+set t_Co=256
